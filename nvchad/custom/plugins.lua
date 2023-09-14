@@ -1,7 +1,13 @@
 require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.intelephense.setup{}
 require'lspconfig'.zls.setup{}
-require'lspconfig'.gopls.setup{}
+require'lspconfig'.gopls.setup{
+  settings = {
+    gopls = {
+      gofumpt = true
+    }
+  }
+}
 require'lspconfig'.docker_compose_language_service.setup{}
 require'lspconfig'.dockerls.setup{}
 
