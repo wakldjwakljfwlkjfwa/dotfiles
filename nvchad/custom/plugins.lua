@@ -11,6 +11,7 @@ require'lspconfig'.gopls.setup{
 require'lspconfig'.docker_compose_language_service.setup{}
 require'lspconfig'.dockerls.setup{}
 require'lspconfig'.clangd.setup{}
+require'lspconfig'.pylsp.setup{}
 
 require("base46").toggle_transparency()
 
