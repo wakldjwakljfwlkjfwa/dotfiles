@@ -8,7 +8,9 @@ require'lspconfig'.gopls.setup{
     }
   }
 }
-require'lspconfig'.docker_compose_language_service.setup{}
+require'lspconfig'.docker_compose_language_service.setup{
+  filetypes = { "yaml", "yml" }
+}
 require'lspconfig'.dockerls.setup{}
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.pylsp.setup{}
