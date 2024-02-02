@@ -4,6 +4,8 @@
 -- See the kickstart.nvim README for more information
 
 vim.opt.rnu = true
+vim.opt.colorcolumn = "80"
+vim.opt.list = true
 
 vim.api.nvim_set_keymap('n', '<leader>lk', [[<Cmd>lua vim.lsp.buf.hover()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>la', [[<Cmd>lua vim.lsp.buf.code_action()<CR>]], { noremap = true, silent = true })
