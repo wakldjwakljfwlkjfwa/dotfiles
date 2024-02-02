@@ -7,6 +7,8 @@ vim.opt.rnu = true
 vim.opt.colorcolumn = "80"
 vim.opt.list = true
 
+vim.api.nvim_set_keymap('n', '<leader>sa', [[<Cmd>Telescope find_files no_ignore=true hidden=true<CR>]], { noremap = true, silent = true })
+
 vim.api.nvim_set_keymap('n', '<leader>lk', [[<Cmd>lua vim.lsp.buf.hover()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>la', [[<Cmd>lua vim.lsp.buf.code_action()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>lo', [[<Cmd>lua vim.diagnostic.open_float()<CR>]],
