@@ -1,17 +1,12 @@
--- Unless you are still migrating, remove the deprecated commands from v1.x
-vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-
 return {
-  "nvim-neo-tree/neo-tree.nvim",
-  version = "*",
+  "nvim-tree/nvim-tree.lua",
   dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-    "MunifTanjim/nui.nvim",
+    "nvim-tree/nvim-web-devicons",
   },
   config = function()
-    require('neo-tree').setup {
-      vim.api.nvim_set_keymap('n', '<leader>n', [[<Cmd>Neotree toggle<CR>]], { desc = 'Toggle [N]eotree' })
+    require("nvim-tree").setup()
+    require("nvim-tree").setup {
+      vim.api.nvim_set_keymap('n', '<leader>n', [[<Cmd>NvimTreeToggle<CR>]], { desc = 'Toggle filetree' })
     }
   end,
 }
