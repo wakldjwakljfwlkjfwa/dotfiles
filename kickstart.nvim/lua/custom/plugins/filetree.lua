@@ -6,7 +6,7 @@ return {
   config = function()
     require("nvim-tree").setup()
     require("nvim-tree").setup {
-      vim.api.nvim_set_keymap('n', '<leader>n', [[<Cmd>NvimTreeToggle<CR>]], { desc = 'Toggle filetree' })
+      vim.api.nvim_set_keymap('n', '<leader>n', [[<Cmd>NvimTreeFindFileToggle<CR>]], { desc = 'Toggle filetree' })
     }
   end,
 }
